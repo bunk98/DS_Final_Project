@@ -2,8 +2,12 @@ FROM php:7.4-apache
 
 LABEL maintainer="Alex Newquist"
 
+RUN docker-php-ext-install pdo_mysql
+
 COPY app /srv/app
 
 COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
 
-# RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+COPY docker/php/php.ini /usr/local/etc/php/php.ini
+
+WORKDIR /srv/app
