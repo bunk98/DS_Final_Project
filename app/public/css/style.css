@@ -9,6 +9,8 @@ h1 {
     font-size: 200%;
     margin-bottom: 0px;
     text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
 }
 
 h3 {
@@ -90,4 +92,39 @@ color: black;
     font-weight: bolder;
   }
 
+  button{
+      
+      background-color: #800000;
+      color: #ddd;
+      margin-bottom: 10px;   
+  }
+
+  .ad{
+    background-color: white;
+    color: black;
+    padding: 8px;
+    font-weight: bold;
+    width: 100px;
+    border-radius: 10px;
+    
+}
+
+.ad:hover{
+    background-color: gray;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    gap: 1em;
+    background-color: #800000;
+    color: #ddd;
+    margin-left: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    
+  }
   
