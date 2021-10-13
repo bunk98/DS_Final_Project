@@ -12,3 +12,131 @@
 .studentName {
     color: #999;
 }
+
+body {
+    font-family: sans-serif;
+}
+header {
+    background-color: #800000;
+    color: #EEEDEB;
+}
+h1 {
+    font-size: 200%;
+    margin-bottom: 0px;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+h3 {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #800000;
+    color: #EEEDEB;   
+}
+
+nav {
+    background-color: #800000;
+    padding: 10px;
+    
+    
+}
+
+.nav-item{
+    color: #ddd;
+}
+
+a {
+    color: dimgrey;
+    font-weight: bold;
+}
+
+q {
+    font-size: 120%;
+    font-style: italic;
+}
+
+footer {
+    background-color: #800000;
+    color: white;
+    padding: 1px;
+    text-align: center;
+}
+
+.navbar a:hover {
+color: black;
+}
+
+.navbar a{
+    color: whitesmoke;
+    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.active {
+    color: slategray!important;
+    font-weight: bolder!important;
+    text-decoration: underline;
+    
+  }
+
+
+
+  .logo-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 6px;
+    margin:10px
+}
+
+.MyText{
+    /*---The margin depends on how the image size is ---*/
+    display:inline-block; 
+    margin-left: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: xx-large;
+    color: #800000;
+    font-weight: bolder;
+  }
+
+  button{
+      
+      background-color: #800000;
+      color: #ddd;
+      margin-bottom: 10px;   
+  }
+
+  .ad{
+    background-color: white;
+    color: black;
+    padding: 8px;
+    font-weight: bold;
+    width: 100px;
+    border-radius: 10px;
+    
+}
+
+.ad:hover{
+    background-color: gray;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    gap: 1em;
+    background-color: #800000;
+    color: #ddd;
+    margin-left: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    
+  }
+  
+
