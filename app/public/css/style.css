@@ -2,24 +2,32 @@ body {
     font-family: sans-serif;
 }
 header {
-    background-color: #990000;
+    background-color: #800000;
     color: #EEEDEB;
 }
 h1 {
-    font-size: 300%;
+    font-size: 200%;
     margin-bottom: 0px;
+    text-decoration: underline;
 }
 
 h3 {
     padding: 8px;
     border-radius: 8px;
-    background-color: #990000;
+    background-color: #800000;
     color: #EEEDEB;   
 }
 
 nav {
-    background-color: #EEEDEB;
+    background-color: #800000;
     padding: 10px;
+    
+    
+}
+
+
+.nav-item{
+    color: #ddd;
 }
 
 a {
@@ -33,90 +41,53 @@ q {
 }
 
 footer {
-    background-color: black;
+    background-color: #800000;
     color: white;
     padding: 1px;
     text-align: center;
 }
 
-.Sub_Ret {
-    font-size: 150%;
-    color: green;
-    font-weight: bold;
-}
-
-.Thanks {
-    font-size: 200%;
-    color: green;
-    font-weight: bold;
-}
-
-/* Navbar container */
-.navbar {
-overflow: hidden;
-background-color: #333;
-font-family: Arial;
-}
-
-/* Links inside the navbar */
-.navbar a {
-float: left;
-font-size: 16px;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-float: left;
-overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-font-size: 16px;
-border: none;
-outline: none;
-color: white;
-padding: 14px 16px;
-background-color: inherit;
-font-family: inherit; /* Important for vertical align on mobile phones */
-margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-background-color: red;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-float: none;
+.navbar a:hover {
 color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-background-color: #ddd;
+.navbar a{
+    color: whitesmoke;
+    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-display: block;
+
+
+.active {
+    color: slategray!important;
+    font-weight: bolder!important;
+    text-decoration: underline;
+    
+  }
+
+
+
+  .logo-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 6px;
+    margin:10px
 }
+
+
+
+
+.MyText{
+    /*---The margin depends on how the image size is ---*/
+    display:inline-block; 
+    margin-left: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: xx-large;
+    color: #800000;
+    font-weight: bolder;
+  }
+
+  
