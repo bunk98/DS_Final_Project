@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Adding Vue js-->
+
+    <script src="https://unpkg.com/vue@next"></script>
+    
+
+    <div class="logo-image">
+        <img src="img/logo.png" class="img-fluid" >    
+  </div>
+  <span class="MyText">INDIANA SOCCER REFEREE ASSOCIATION</span>
+
+
+  <!-- <a href="#" class="MyLink"><img src="C:\Users\asha0\OneDrive\Documents\GitHub\DS_Final_Project\images\logo.png" /><span class="MyLinkText">INDIANA SOCCER REFERER ASSOCIATION</span></a> -->
+  
+
+  </head>
+  <body>
+
+  
+    <nav class="navbar sticky-top navbar-expand-lg ">
+        
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link "  href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="referee.html">REFEREE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">GAMES</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link " href="index.html">ASSIGNMENTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">REPORTS</a>
+              </li>
+            </ul>
+
+            
+          </div>
+
+          
+        </div>
+
+    
+      </nav>
+      
+
+      <br>
+      <br>
+
+      
+    <h1  class="text-center">ADD A REFEREE </h1>
+
+    <div id="offerApp" class="form">
+    
+  <form v-on:submit.prevent="postNewOffer" class="text-center" >
+
+    <div class="mb-3" >
+      <label for="first_name" class="form-label" >First Name:</label>
+      <input type="text" v-model="offerForm.first_name"
+       class="form-control" id="first_name" >
+    </div>
+
+    <div class="mb-3" >
+        <label for="last_name" class="form-label" >Last Name:</label>
+        <input type="text" v-model="offerForm.last_name"
+         class="form-control" id="last_name" >
+    </div>
+
+    <div class="mb-3" >
+        <label for="age" class="form-label" >Age:</label>
+        <input type="number" v-model="offerForm.age"
+         class="form-control" id="age" >
+    </div>
+
+    <div class="mb-3" >
+        <label for="dob" class="form-label" >Date of Birth:</label>
+        <input type="date" v-model="offerForm.dob"
+         class="form-control" id="dob" >
+    </div>
+
+
+    <div class="mb-3">
+      <label for="grading" class="form-label">Grading:</label>
+      <input type="text" v-model="offerForm.grading"
+       class="form-control" id="grading">
+    </div>
+    
+
+
+    <div class="mb-3">
+      <label for="rating" class="form-label">Rating:</label>
+      <input type="number" v-model="offerForm.rating"
+       class="form-control" id="rating">
+    </div>  
+      <br>
+            <br>
+            <input class="ad" type="submit" value="Submit"><br>
+            <br>
+
+        </form>
+
+ 
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    
+   
+
+<footer class="text-center">
+    Indiana Soccer Referee Association |  isrf@iu.edu | 1275 E 10th St Bloomington, IN 47405 | (987)-654-3210
+
+</footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+    <script src="js/referee.js"></script>
+
+    
+  </body>
+</html>
