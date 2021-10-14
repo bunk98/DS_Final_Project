@@ -67,7 +67,7 @@
       <br>
 
       
-    <h1  class="text-center">REFEREE DETAILS</h1>
+    <h1  class="text-center">ASSIGNMENT DETAILS</h1>
 
     <br>
 
@@ -77,25 +77,19 @@
 
         <thead>
           <tr>
-            <th scope="col">Sr no</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Date of Birth</th>
-            <th scope="col">Grade</th>
-            <th scope="col">Rating</th>
+            <th scope="col">Status</th>
+            <th scope="col">Position</th>
+            <th scope="col">Referee</th>
+            <th scope="col">Game</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr v-for="r in referee">
-              <td>{{ r.id }}</td>
-              <td>{{ r.first_name }}</td>
-              <td>{{ r.last_name}}</td>
-              <td>{{ r.age }}</td>
-              <td>{{ r.dob }}</td>
-              <td>{{ r.grade }}</td>
-              <td>{{ r.rating }}</td>
+          <tr v-for="a in assignments">
+              <td>{{ a.rg_status }}</td>
+              <td>{{ a.position }}</td>
+              <td>{{ a.refereeID}}</td>
+              <td>{{ a.gameID }}</td>
               </tr>
 
             
@@ -110,13 +104,13 @@
 
     <div class="text-center">
 
-    <a href="add_referee.html" >
+    <a href="add_assignment.html" >
       <button>ADD</button>
     </a>
-    <a href="add_referee.html" >
+    <a href="add_assignment.html" >
       <button>EDIT</button>
     </a>
-    <a href="add_referee.html" >
+    <a href="add_assignment.html" >
       <button>DELETE</button>
     </a>
   </div>
@@ -138,7 +132,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
-    <script src="js/referee.js"></script>
+    <script src="js/assignment.js"></script>
 
     
   </body>
