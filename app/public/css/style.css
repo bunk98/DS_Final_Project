@@ -15,9 +15,11 @@ h1 {
 
 h3 {
     padding: 8px;
+    font-weight: bold;
     border-radius: 8px;
-    background-color: #800000;
-    color: #EEEDEB;   
+    /* background-color: #800000; */
+    color: #800000; 
+    text-decoration: underline;  
 }
 
 nav {
@@ -70,7 +72,7 @@ color: black;
 
 
 
-  .logo-image{
+.logo-image{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -100,12 +102,13 @@ color: black;
   }
 
   .ad{
-    background-color: white;
-    color: black;
-    padding: 8px;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
     font-weight: bold;
-    width: 100px;
+    width: 150px;
     border-radius: 10px;
+    margin:20px;
     
 }
 
@@ -113,18 +116,77 @@ color: black;
     background-color: gray;
 }
 
+
+.btn{
+    
+    padding: 8px;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 10px;
+    
+    
+}
+
+.btn:hover{
+    background-color: #800000;
+    color:whitesmoke;
+}
+
+.btn1{
+    padding: 8px;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: GRAY;
+    color: black;
+    width: 100px;
+
+    
+}
+
+.btn1:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* 
 .form {
+    text-align: center;
+    display: flex;
+    flex-direction: row; */
+    
+    /* width: 50%; */
+    /* gap: 1em;
+    background-color: #800000;
+    color: #ddd;
+    justify-content: center; */
+    /* margin-left: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px; */
+    
+    
+  /* } */
+  
+
+  .navbar-toggler-icon {
+    width: 47px;
+    height: 34px;
+    color: white;
+    border:none;
+}
+
+.sss {
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 50%;
-    gap: 1em;
+    
     background-color: #800000;
     color: #ddd;
-    margin-left: 300px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
+    margin: auto;
     
+    border-radius: 20px;
+    text-align: center;
   }
-  
+
