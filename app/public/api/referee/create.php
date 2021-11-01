@@ -32,17 +32,16 @@ $db = DbConnection::getConnection();
 // Note the use of parameterized statements to avoid injection
 
 $stmt = $db->prepare(
-  'INSERT INTO referee (first_name, last_name, age, dob, grade, rating)
-  VALUES (?, ?, ?, ?, ?, ?)'
+  'INSERT INTO Referee (firstname, lastname, grade, rating, dob)
+  VALUES (?, ?, ?, ?, ?)'
 );
 
 $stmt->execute([        
-  $_POST['first_name'],
-  $_POST['last_name'],
-  $_POST['age'],
-  $_POST['dob'],
+  $_POST['firstname'],
+  $_POST['lastname'],
   $_POST['grade'],
-  $_POST['rating']
+  $_POST['rating'],
+  $_POST['dob']
 ]);
 
 // Get auto-generated PK from DB
