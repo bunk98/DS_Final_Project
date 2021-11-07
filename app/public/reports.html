@@ -71,8 +71,51 @@
       <br>
       <br>
       <h1  class="text-center">GAMES BY REFEREE</h1>
-      <p>Tables Display Here</p>
-      <br>
+      <div id="offerApp">
+        <br>
+        <div class="dropdown">
+          <button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Choose Referee
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+        <br>
+        <table id="taskTable" class="table" >
+  
+          <thead>
+            <tr>
+              <th scope="col">Game Name</th>
+              <th scope="col">Game Date</th>
+              <th scope="col">Status</th>
+              <th scope="col">Position</th>
+              <th scope="col">Referee</th>
+              <th scope="col">Game</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr v-for="a in assignments">
+                <td>{{ a.game_name }}</td>
+                <td>{{ a.game_date }}</td>
+                <td>{{ a.rg_status }}</td>
+                <td>{{ a.position }}</td>
+                <td>{{ a.refereeID}}</td>
+                <td>{{ a.gameID }}</td>
+                </tr>
+  
+              
+                
+            <!-- </tr> -->
+          </tbody>
+  
+  
+        </table>
+  
+    
       <p>Export as CSV
         <button type="button">
           <span class="glyphicon glyphicon-export"></span> Export
@@ -82,7 +125,7 @@
       
       
       
-      <h1  class="text-center">FUTURE GAMES</h1>
+      <h1  class="text-center">UNASSIGNED FUTURE GAMES</h1>
       <p>Tables Display Here</p>
       <br>
       <p>Export as CSV
@@ -103,13 +146,13 @@
       </p>
       <br>
 
-
+    </div>
     </main>
       
 	<footer class="text-center">
 		Indiana Soccer Referee Association |  isrf@iu.edu | 1275 E 10th St Bloomington, IN 47405 | (987)-654-3210
 	
 	</footer>
-	
+  <script src="js/assignment.js"></script>
 </body>
 </html>
