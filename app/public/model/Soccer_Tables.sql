@@ -47,8 +47,3 @@ insert into Ref_Game (rg_status, position, refereeID, gameID) values ('Tenative'
 insert into Ref_Game (rg_status, position, refereeID, gameID) values ('Accepted', 'Mid line', 2, 3);
 insert into Ref_Game (rg_status, position, refereeID, gameID) values ('Accepted', 'Goal line', 4, 1);
 insert into Ref_Game (rg_status, position, refereeID, gameID) values ('Assigned', 'Mid line', 5, 4);
-
-SELECT refereeID, gameID FROM Ref_Game
-
-
-SELECT refereeID, gameID from Referee
