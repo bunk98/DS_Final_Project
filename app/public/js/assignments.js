@@ -3,8 +3,9 @@ const Offer = {
     data() {
 
         return {
-
-            "game" : [],
+           "game" : [],
+            "referee2" : [],
+            "referee" : [],
             "offers": [],
             "offerForm": {},
             selectedOffer : null
@@ -21,14 +22,38 @@ const Offer = {
             return dayjs(d)
             .format('D MMM YYYY')
         },  
+
+        fetchRefereeData2() {
+          fetch('/api/referee/')
+          .then(response => response.json())
+          .then((parsedJson) => {
+              console.log(parsedJson);
+              this.referee2 = parsedJson
+          })
+          .catch( err => {
+              console.error(err)
+          })
+      },
+
+      fetchGameData() {
+        fetch('/api/games/')
+        .then(response => response.json())
+        .then((parsedJson) => {
+            console.log(parsedJson);
+            this.game = parsedJson
+        })
+        .catch( err => {
+            console.error(err)
+        })
+    },
         
 
-        fetchGameData() {
-            fetch('/api/games/')
+        fetchRefereeData() {
+            fetch('/api/assignments/')
             .then(response => response.json())
             .then((parsedJson) => {
                 console.log(parsedJson);
-                this.game = parsedJson
+                this.referee = parsedJson
             })
             .catch( err => {
                 console.error(err)
@@ -48,7 +73,7 @@ const Offer = {
             // console.log("Posting:", this.offerForm);
             //  alert("Posting!");
     
-            fetch('api/games/create.php', {
+            fetch('api/assignments/create.php', {
                 method:'POST',
                 body: JSON.stringify(this.offerForm),
                 headers: {
@@ -59,7 +84,7 @@ const Offer = {
               .then( json => {
                 console.log("Returned from post:", json);
                 // TODO: test a result was returned!
-                this.game = json;
+                this.referee = json;
                 
                 // reset the form
                 this.resetOfferForm();
@@ -77,7 +102,7 @@ const Offer = {
     
             // console.log("Updating!", this.offerForm);
     
-            fetch('api/games/update.php', {
+            fetch('api/assignments/update.php', {
                 method:'POST',
                 body: JSON.stringify(this.offerForm),
                 headers: {
@@ -88,7 +113,7 @@ const Offer = {
               .then( json => {
                 console.log("Returned from post:", json);
                 // TODO: test a result was returned!
-                this.game = json;
+                this.referee = json;
     
                 // reset the form
                 this.resetOfferForm();
@@ -101,7 +126,7 @@ const Offer = {
             }
             console.log("Delete!", o);
     
-            fetch('api/games/delete.php', {
+            fetch('api/assignments/delete.php', {
                 method:'POST',
                 body: JSON.stringify(o),
                 headers: {
@@ -112,7 +137,7 @@ const Offer = {
               .then( json => {
                 console.log("Returned from post:", json);
                 // TODO: test a result was returned!
-                this.game = json;
+                this.referee = json;
     
                 // reset the form
                 this.resetOfferForm();
@@ -133,6 +158,8 @@ const Offer = {
 
     created(){
 
+        this.fetchRefereeData();
+        this.fetchRefereeData2();
         this.fetchGameData();
 
     }

@@ -190,3 +190,33 @@ color: black;
     text-align: center;
   }
 
+  .student {
+    margin: 10px 2px;
+    padding: 4px;
+    border: 1px solid #800000;
+    background-color: #ddd;
+}
+
+.userName {
+    font-weight: bold;
+}
+
+.studentName {
+    color: black;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

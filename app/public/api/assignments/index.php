@@ -6,7 +6,7 @@ require 'class/DbConnection.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = 'SELECT * FROM Ref_Game';
+$sql = 'SELECT CONCAT(r.firstname, " ", r.lastname) as referee, g.game_name as game, rg.rg_status as rg_status, rg.position as position, rg.rgID as rgID  FROM Ref_Game as rg JOIN Referee as r on rg.refereeID = r.refereeID JOIN Game as g on rg.gameID = g.gameID';
 $vars = [];
 
 // if (isset($_GET['guid'])) {
@@ -18,10 +18,10 @@ $vars = [];
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
 
-$patients = $stmt->fetchAll();
+$referee = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
-$json = json_encode($patients, JSON_PRETTY_PRINT);
+$json = json_encode($referee, JSON_PRETTY_PRINT);
 
 // Step 4: Output
 header('Content-Type: application/json');
